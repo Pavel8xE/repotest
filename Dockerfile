@@ -1,4 +1,5 @@
 FROM ubuntu:20.04
+RUN echo Europe/Moscow > /etc/timezone
 RUN apt update && apt-get install -y default-jdk maven tomcat9 git
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git /home
 RUN cd /home/boxfuse-sample-java-war-hello.git
