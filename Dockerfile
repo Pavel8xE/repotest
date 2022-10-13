@@ -4,6 +4,6 @@ RUN apt-get update && apt-get install -y default-jdk maven tomcat9 git
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git /home/
 RUN cd /home
 RUN mvn package
-RUN cp /home/hello-1.0.war /var/lib/tomcat9/webapps/
+RUN cp /home/target/hello-1.0.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
 CMD ["catalina.sh", "run-get"]
