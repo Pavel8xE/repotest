@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
 ENV CATALINA_HOME /usr/share/tomcat9
+ENV PATH $CATALINA_HOME/bin:$PATH
 ENV CATALINA_BASE /var/lib/tomcat9
 ENV CATALINA_TMPDIR /tmp
 ENV JAVA_OPTS -Djava.awt.headless=true
