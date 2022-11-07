@@ -1,8 +1,9 @@
-FROM ubuntu:20.04
-ENV CATALINA_HOME /usr/share/tomcat9
-ENV CATALINA_BASE /var/lib/tomcat9
-ENV CATALINA_TMPDIR /tmp
-ENV JAVA_OPTS -Djava.awt.headless=true
+FROM tomcat:9.0
+CATALINA_BASE:   /usr/local/tomcat
+CATALINA_HOME:   /usr/local/tomcat
+CATALINA_TMPDIR: /usr/local/tomcat/temp
+JRE_HOME:        /usr
+CLASSPATH:       /usr/local/tomcat/bin/bootstrap.jar:/usr/local/tomcat/bin/tomcat-juli.jar
 RUN ln -sn /usr/share/zoneinfo/Europe/Moscow /etc/localtime && echo Europe/Moscow > /etc/timezone
 RUN apt-get update && apt-get install -y default-jdk maven tomcat9 git
 WORKDIR /home
