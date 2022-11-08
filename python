@@ -4,4 +4,4 @@ ADD requiremens.txt /tmp/
 RUN apt-get install python-all; python-pip -y -q
 RUN pip install -qr requiremens.txt
 EXPOSE 5000
-CMD ["python3" app.py"]
+CMD ["python3" "app.py"]
