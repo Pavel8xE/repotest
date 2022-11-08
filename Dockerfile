@@ -1,4 +1,4 @@
-FROM tomcat:9.0
+FROM 9.0.68-jdk11-temurin-jammy
 CATALINA_BASE: /usr/local/tomcat
 CATALINA_HOME: /usr/local/tomcat
 CATALINA_TMPDIR: /usr/local/tomcat/temp
