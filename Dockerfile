@@ -1,4 +1,4 @@
-FROM 9.0.68-jdk11-temurin-jammy
+FROM tomcat:9.0.68-jdk11-temurin-jammy
 RUN ln -sn /usr/share/zoneinfo/Europe/Moscow /etc/localtime && echo Europe/Moscow > /etc/timezone
 RUN apt-get update && apt-get install -y git
 WORKDIR /home
